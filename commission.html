@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>委託資訊 | RyumataHz</title>
+  <meta name="description" content="RyumataHz 委託服務詳細資訊，包含價格表、流程說明等。">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/commission.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+</head>
+<body class="commission-page">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">RyumataHz</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首頁</a></li>
+        <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+        <li><a href="commission.html" class="nav-link active">委託資訊</a></li>
+        <li><a href="contact.html" class="nav-link">聯繫方式</a></li>
+      </ul>
+      
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Commission Header -->
+  <header class="commission-header">
+    <h1>委託服務</h1>
+    <p>專業的數位藝術委託服務，為您打造獨一無二的作品</p>
+  </header>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="section-header">
+      <h2 class="section-title">價格方案</h2>
+      <p class="section-subtitle">選擇適合您的委託方案</p>
+    </div>
+    
+    <div class="pricing-grid">
+      <!-- Basic Plan -->
+      <div class="pricing-card">
+        <div class="pricing-icon">📝</div>
+        <h3>基礎方案</h3>
+        <p class="pricing-desc">簡單的頭像或小幅插畫</p>
+        <div class="pricing-price">
+          <span class="currency">NT$</span>
+          <span class="amount">1,500</span>
+          <span class="unit">起</span>
+        </div>
+        <ul class="pricing-features">
+          <li>頭像繪製</li>
+          <li>簡單背景</li>
+          <li>1-2 天交稿</li>
+          <li>1 次修改</li>
+          <li>提供 JPG 檔案</li>
+        </ul>
+        <button class="btn btn-outline" onclick="selectPricing('basic')">選擇方案</button>
+      </div>
+      
+      <!-- Standard Plan (Featured) -->
+      <div class="pricing-card featured">
+        <span class="pricing-badge">人氣推薦</span>
+        <div class="pricing-icon">✨</div>
+        <h3>標準方案</h3>
+        <p class="pricing-desc">完整的角色或場景插畫</p>
+        <div class="pricing-price">
+          <span class="currency">NT$</span>
+          <span class="amount">3,500</span>
+          <span class="unit">起</span>
+        </div>
+        <ul class="pricing-features">
+          <li>角色立繪</li>
+          <li>精緻背景</li>
+          <li>3-5 天交稿</li>
+          <li>2 次修改</li>
+          <li>提供 JPG + PNG 檔案</li>
+        </ul>
+        <button class="btn btn-primary" onclick="selectPricing('standard')">選擇方案</button>
+      </div>
+      
+      <!-- Premium Plan -->
+      <div class="pricing-card">
+        <div class="pricing-icon">👑</div>
+        <h3>進階方案</h3>
+        <p class="pricing-desc">複雜場景或多角色插畫</p>
+        <div class="pricing-price">
+          <span class="currency">NT$</span>
+          <span class="amount">6,000</span>
+          <span class="unit">起</span>
+        </div>
+        <ul class="pricing-features">
+          <li>多角色插畫</li>
+          <li>複雜場景</li>
+          <li>7-10 天交稿</li>
+          <li>3 次修改</li>
+          <li>提供高解析度檔案</li>
+        </ul>
+        <button class="btn btn-outline" onclick="selectPricing('premium')">選擇方案</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="section-header">
+      <h2 class="section-title">委託流程</h2>
+      <p class="section-subtitle">簡單四步，輕鬆完成委託</p>
+    </div>
+    
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-step">1</div>
+        <h4>諮詢討論</h4>
+        <p>聯繫討論委託需求<br>確認價格與交期</p>
+      </div>
+      <div class="process-item">
+        <div class="process-step">2</div>
+        <h4>草稿確認</h4>
+        <p>提供初步草稿<br>確認構圖與細節</p>
+      </div>
+      <div class="process-item">
+        <div class="process-step">3</div>
+        <h4>完稿修飾</h4>
+        <p>繪製完整作品<br>進行細節調整</p>
+      </div>
+      <div class="process-item">
+        <div class="process-step">4</div>
+        <h4>交付作品</h4>
+        <p>確認滿意後交付<br>提供完整檔案</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes Section -->
+  <section class="notes-section">
+    <div class="section-header">
+      <h2 class="section-title">委託須知</h2>
+      <p class="section-subtitle">委託前請詳細閱讀</p>
+    </div>
+    
+    <div class="notes-grid">
+      <div class="note-card">
+        <h4><span>📋</span> 委託事項</h4>
+        <ul>
+          <li>請先閱讀價格方案與委託須知</li>
+          <li>聯繫時請清楚說明委託內容</li>
+          <li>提供完整的角色設定或參考圖</li>
+          <li>確認委託後需先支付 50% 訂金</li>
+        </ul>
+      </div>
+      
+      <div class="note-card">
+        <h4><span>❌</span> 拒絕委託</h4>
+        <ul>
+          <li>任何涉及未成年人的不良內容</li>
+          <li>抄襲或盜用他人設計</li>
+          <li>違反公共道德或法律</li>
+          <li>過於複雜或超出能力範圍</li>
+        </ul>
+      </div>
+      
+      <div class="note-card">
+        <h4><span>📦</span> 檔案交付</h4>
+        <ul>
+          <li>提供高解析度 JPG 檔案</li>
+          <li>含透明背景 PNG 檔案</li>
+          <li>如需 PSD 檔案請另外告知</li>
+          <li>交付後不接受內容修改</li>
+        </ul>
+      </div>
+      
+      <div class="note-card">
+        <h4><span>💡</span> 其他說明</h4>
+        <ul>
+          <li>可商用作品需額外收費</li>
+          <li>急件加成 30%-50%</li>
+          <li>如需加強背景或特效另行報價</li>
+          <li>最終作品可用於個人展示</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>準備好委託了嗎？</h2>
+      <p>填寫聯繫表單，開始您的委託之旅！</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">聯繫委託</a>
+        <a href="portfolio.html" class="btn btn-secondary">查看作品</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">🌸 RyumataHz</span>
+        <p class="footer-desc">數位藝術創作者，專注於角色設計與原創插畫</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="portfolio.html">作品集</a></li>
+            <li><a href="commission.html">委託資訊</a></li>
+            <li><a href="contact.html">聯繫方式</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>社群媒體</h4>
+          <ul>
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="#" target="_blank">Pixiv</a></li>
+            <li><a href="#" target="_blank">ArtStation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 RyumataHz. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link">📷</a>
+        <a href="#" class="social-link">🐦</a>
+        <a href="#" class="social-link">🎨</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="public/js/main.js"></script>
+  <script src="public/js/commission.js"></script>
+</body>
+</html>

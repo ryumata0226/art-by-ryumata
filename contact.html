@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯繫方式 | RyumataHz</title>
+  <meta name="description" content="聯繫 RyumataHz，進行委託或合作洽談。">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/contact.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📧</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">RyumataHz</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首頁</a></li>
+        <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+        <li><a href="commission.html" class="nav-link">委託資訊</a></li>
+        <li><a href="contact.html" class="nav-link active">聯繫方式</a></li>
+      </ul>
+      
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Header -->
+  <header class="contact-header">
+    <h1>聯繫方式</h1>
+    <p>有委託需求或合作機會？歡迎隨時聯繫我！</p>
+  </header>
+
+  <!-- Contact Container -->
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>聯繫資訊</h2>
+      
+      <div class="contact-method">
+        <div class="contact-icon">📧</div>
+        <div class="contact-details">
+          <h3>電子郵件</h3>
+          <p><a href="mailto:ryumatahz@example.com">ryumatahz@example.com</a></p>
+        </div>
+      </div>
+      
+      <div class="contact-method">
+        <div class="contact-icon">💬</div>
+        <div class="contact-details">
+          <h3>Discord</h3>
+          <p>ryumatahz#1234</p>
+        </div>
+      </div>
+      
+      <div class="contact-method">
+        <div class="contact-icon">📱</div>
+        <div class="contact-details">
+          <h3>LINE</h3>
+          <p>@ryumatahz</p>
+        </div>
+      </div>
+      
+      <!-- Social Section -->
+      <div class="social-section">
+        <h3>社群媒體</h3>
+        <div class="social-grid">
+          <a href="https://instagram.com/ryumatahz" target="_blank" class="social-btn">
+            <span>📷</span>
+            <span>Instagram</span>
+          </a>
+          <a href="https://twitter.com/ryumatahz" target="_blank" class="social-btn">
+            <span>🐦</span>
+            <span>Twitter</span>
+          </a>
+          <a href="https://pixiv.me/ryumatahz" target="_blank" class="social-btn">
+            <span>🎨</span>
+            <span>Pixiv</span>
+          </a>
+          <a href="https://artstation.com/ryumatahz" target="_blank" class="social-btn">
+            <span>🖥️</span>
+            <span>ArtStation</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- LikeCoin Section -->
+      <div class="likecoin-section">
+        <h3>支持創作</h3>
+        <p>如果喜歡我的作品，可以透過 LikeCoin 支持我！</p>
+        <button class="btn btn-secondary likecoin-button">
+          <span>❤️</span> 讚好作品
+        </button>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+      <h2>發送訊息</h2>
+      
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">姓名 *</label>
+            <input type="text" id="name" name="name" required placeholder="您的姓名">
+          </div>
+          <div class="form-group">
+            <label for="email">電子郵件 *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="commission-type">委託類型</label>
+          <select id="commission-type" name="commission-type">
+            <option value="">請選擇...</option>
+            <option value="character">角色設計</option>
+            <option value="illustration">插畫委託</option>
+            <option value="commercial">商業合作</option>
+            <option value="other">其他詢問</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">主題 *</label>
+          <input type="text" id="subject" name="subject" required placeholder="訊息主題">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">訊息內容 *</label>
+          <textarea id="message" name="message" required placeholder="詳細描述您的需求..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary form-submit">
+          <span>📤</span> 發送訊息
+        </button>
+      </form>
+      
+      <!-- Success Message -->
+      <div class="form-success">
+        <div class="success-icon">✓</div>
+        <h3>訊息發送成功！</h3>
+        <p>感謝您的聯繫，我會盡快回覆您。</p>
+        <button class="btn btn-outline" onclick="resetForm()">發送新訊息</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">🌸 RyumataHz</span>
+        <p class="footer-desc">數位藝術創作者，專注於角色設計與原創插畫</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="portfolio.html">作品集</a></li>
+            <li><a href="commission.html">委託資訊</a></li>
+            <li><a href="contact.html">聯繫方式</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>社群媒體</h4>
+          <ul>
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="#" target="_blank">Pixiv</a></li>
+            <li><a href="#" target="_blank">ArtStation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 RyumataHz. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link">📷</a>
+        <a href="#" class="social-link">🐦</a>
+        <a href="#" class="social-link">🎨</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="public/js/main.js"></script>
+  <script src="public/js/contact.js"></script>
+</body>
+</html>
