@@ -126,19 +126,23 @@ img {
   50% { opacity: 0.5; transform: translateY(-50%) scale(0.8); }
 }
 .nav-menu {
-  display: flex;
-  flex-direction: row; /* 👈 強制橫向 */
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 40px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
 }
+
+/* 確保 li 也是橫向 */
 .nav-menu li {
-  display: block;
-  margin: 0;
-  padding: 0;
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 .nav-link {
   font-size: 1rem;
   color: var(--text-secondary);
