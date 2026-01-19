@@ -1,0 +1,13 @@
+{
+  "name": "art-by-ryumata",
+  "version": "1.0.0",
+  "description": "RyumataHz 插畫家個人作品集網站",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["portfolio", "illustration", "art", "character-design"],
+  "author": "RyumataHz",
+  "license": "MIT"
+}
