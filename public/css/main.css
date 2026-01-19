@@ -126,21 +126,27 @@ img {
   50% { opacity: 0.5; transform: translateY(-50%) scale(0.8); }
 }
 
-.nav-links {
+.nav-menu {
   display: flex;
   gap: 40px;
   list-style: none;
+  align-items: center;
 }
 
-.nav-links a {
+.nav-menu li {
+  display: flex;
+}
+
+.nav-link {
   font-size: 1rem;
   color: var(--text-secondary);
   font-weight: 500;
   position: relative;
   padding: 8px 0;
+  white-space: nowrap; /* 防止文字換行 */
 }
 
-.nav-links a::before {
+.nav-link::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -151,13 +157,13 @@ img {
   transition: 0.4s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
 }
 
-.nav-links a:hover::before,
-.nav-links a.active::before {
+.nav-link:hover::before,
+.nav-link.active::before {
   width: 100%;
 }
 
