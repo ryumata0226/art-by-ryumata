@@ -1,4 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap');
+/* ===== Google Fonts ===== */
+/* 
+   英文字體: Quintessential
+   中文字體: LXGW WenKai Mono TC 
+*/
+
+:root {
+    --font-english: 'Quintessential', cursive;
+    --font-chinese: 'LXGW WenKai Mono TC', sans-serif;
+}
+
+/* 全站使用中文字體 */
+body {
+    font-family: var(--font-chinese);
+}
+
+/* 標題和導航用英文字體 */
+h1, h2, h3, h4, h5, h6, .logo, .nav-link {
+    font-family: var(--font-english);
+}
+
 
 :root {
   --bg-primary: #0a0a0f;
