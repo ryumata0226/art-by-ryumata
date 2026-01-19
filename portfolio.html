@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集 | RyumataHz</title>
+  <meta name="description" content="RyumataHz 的數位藝術作品集，展示角色設計、插畫等創作。">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/portfolio.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+</head>
+<body class="portfolio-page">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">RyumataHz</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首頁</a></li>
+        <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
+        <li><a href="commission.html" class="nav-link">委託資訊</a></li>
+        <li><a href="contact.html" class="nav-link">聯繫方式</a></li>
+      </ul>
+      
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Portfolio Header -->
+  <header class="portfolio-header">
+    <h1>我的作品集</h1>
+    <p>探索我的數位藝術世界，從角色設計到精美插畫</p>
+  </header>
+
+  <!-- Filter Tabs -->
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">全部作品</button>
+    <button class="filter-tab" data-filter="character">角色設計</button>
+    <button class="filter-tab" data-filter="illustration">插畫作品</button>
+    <button class="filter-tab" data-filter="commission">委託作品</button>
+  </div>
+
+  <!-- Portfolio Grid -->
+  <div class="portfolio-grid">
+    <!-- Items will be rendered by JavaScript -->
+    <div class="portfolio-item" data-category="character" onclick="openLightbox(0, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=火焰精靈" alt="火焰精靈">
+      <div class="portfolio-overlay">
+        <h3>火焰精靈</h3>
+        <p>角色設計</p>
+        <div class="portfolio-tags">
+          <span class="tag">原創</span>
+          <span class="tag">奇幻</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="illustration" onclick="openLightbox(1, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=星空下的約定" alt="星空下的約定">
+      <div class="portfolio-overlay">
+        <h3>星空下的約定</h3>
+        <p>插畫</p>
+        <div class="portfolio-tags">
+          <span class="tag">場景</span>
+          <span class="tag">夜景</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="character" onclick="openLightbox(2, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=機械少女" alt="機械少女">
+      <div class="portfolio-overlay">
+        <h3>機械少女</h3>
+        <p>角色設計</p>
+        <div class="portfolio-tags">
+          <span class="tag">原創</span>
+          <span class="tag">科幻</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="illustration" onclick="openLightbox(3, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=春日漫步" alt="春日漫步">
+      <div class="portfolio-overlay">
+        <h3>春日漫步</h3>
+        <p>插畫</p>
+        <div class="portfolio-tags">
+          <span class="tag">場景</span>
+          <span class="tag">自然</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="commission" onclick="openLightbox(4, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=委託作品+A" alt="委託作品 A">
+      <div class="portfolio-overlay">
+        <h3>委託作品 A</h3>
+        <p>委託</p>
+        <div class="portfolio-tags">
+          <span class="tag">委託</span>
+          <span class="tag">角色</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="character" onclick="openLightbox(5, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=精靈王子" alt="精靈王子">
+      <div class="portfolio-overlay">
+        <h3>精靈王子</h3>
+        <p>角色設計</p>
+        <div class="portfolio-tags">
+          <span class="tag">原創</span>
+          <span class="tag">奇幻</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="illustration" onclick="openLightbox(6, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=雨中城市" alt="雨中城市">
+      <div class="portfolio-overlay">
+        <h3>雨中城市</h3>
+        <p>插畫</p>
+        <div class="portfolio-tags">
+          <span class="tag">場景</span>
+          <span class="tag">都市</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="commission" onclick="openLightbox(7, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=委託作品+B" alt="委託作品 B">
+      <div class="portfolio-overlay">
+        <h3>委託作品 B</h3>
+        <p>委託</p>
+        <div class="portfolio-tags">
+          <span class="tag">委託</span>
+          <span class="tag">插畫</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-item" data-category="character" onclick="openLightbox(8, 'all')">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=水系法師" alt="水系法師">
+      <div class="portfolio-overlay">
+        <h3>水系法師</h3>
+        <p>角色設計</p>
+        <div class="portfolio-tags">
+          <span class="tag">原創</span>
+          <span class="tag">奇幻</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox-close">×</button>
+    <button class="lightbox-nav lightbox-prev">←</button>
+    <img src="" alt="Portfolio Image" class="lightbox-content">
+    <h3 class="lightbox-title"></h3>
+    <button class="lightbox-nav lightbox-next">→</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">🌸 RyumataHz</span>
+        <p class="footer-desc">數位藝術創作者，專注於角色設計與原創插畫</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="portfolio.html">作品集</a></li>
+            <li><a href="commission.html">委託資訊</a></li>
+            <li><a href="contact.html">聯繫方式</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>社群媒體</h4>
+          <ul>
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Twitter</a></li>
+            <li><a href="#" target="_blank">Pixiv</a></li>
+            <li><a href="#" target="_blank">ArtStation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 RyumataHz. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link">📷</a>
+        <a href="#" class="social-link">🐦</a>
+        <a href="#" class="social-link">🎨</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="public/js/main.js"></script>
+  <script src="public/js/portfolio.js"></script>
+</body>
+</html>
