@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@300;400;500&family=Quintessential&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="public/css/main.css">
@@ -27,14 +27,14 @@
         <span class="logo-text">RyumataHz</span>
       </a>
       
-      <ul class="nav-menu">
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="nav-link">首頁</a></li>
         <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
         <li><a href="commission.html" class="nav-link">委託資訊</a></li>
         <li><a href="contact.html" class="nav-link">聯繫方式</a></li>
       </ul>
       
-      <button class="nav-toggle" id="nav-toggle">
+      <button class="nav-toggle" id="nav-toggle" aria-label="切換選單" aria-controls="nav-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -60,7 +60,7 @@
   <div class="portfolio-grid">
     <!-- Items will be rendered by JavaScript -->
     <div class="portfolio-item" data-category="character" onclick="openLightbox(0, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=火焰精靈" alt="火焰精靈">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=火焰精靈" alt="火焰精靈" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>火焰精靈</h3>
         <p>角色設計</p>
@@ -72,7 +72,7 @@
     </div>
     
     <div class="portfolio-item" data-category="illustration" onclick="openLightbox(1, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=星空下的約定" alt="星空下的約定">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=星空下的約定" alt="星空下的約定" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>星空下的約定</h3>
         <p>插畫</p>
@@ -84,7 +84,7 @@
     </div>
     
     <div class="portfolio-item" data-category="character" onclick="openLightbox(2, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=機械少女" alt="機械少女">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=機械少女" alt="機械少女" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>機械少女</h3>
         <p>角色設計</p>
@@ -96,7 +96,7 @@
     </div>
     
     <div class="portfolio-item" data-category="illustration" onclick="openLightbox(3, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=春日漫步" alt="春日漫步">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=春日漫步" alt="春日漫步" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>春日漫步</h3>
         <p>插畫</p>
@@ -108,7 +108,7 @@
     </div>
     
     <div class="portfolio-item" data-category="commission" onclick="openLightbox(4, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=委託作品+A" alt="委託作品 A">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=委託作品+A" alt="委託作品 A" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>委託作品 A</h3>
         <p>委託</p>
@@ -120,7 +120,7 @@
     </div>
     
     <div class="portfolio-item" data-category="character" onclick="openLightbox(5, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=精靈王子" alt="精靈王子">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=精靈王子" alt="精靈王子" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>精靈王子</h3>
         <p>角色設計</p>
@@ -132,7 +132,7 @@
     </div>
     
     <div class="portfolio-item" data-category="illustration" onclick="openLightbox(6, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=雨中城市" alt="雨中城市">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=雨中城市" alt="雨中城市" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>雨中城市</h3>
         <p>插畫</p>
@@ -144,7 +144,7 @@
     </div>
     
     <div class="portfolio-item" data-category="commission" onclick="openLightbox(7, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=委託作品+B" alt="委託作品 B">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=委託作品+B" alt="委託作品 B" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>委託作品 B</h3>
         <p>委託</p>
@@ -156,7 +156,7 @@
     </div>
     
     <div class="portfolio-item" data-category="character" onclick="openLightbox(8, 'all')">
-      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=水系法師" alt="水系法師">
+      <img src="https://via.placeholder.com/400x533/1a1a25/8b5cf6?text=水系法師" alt="水系法師" loading="lazy" decoding="async">
       <div class="portfolio-overlay">
         <h3>水系法師</h3>
         <p>角色設計</p>
@@ -188,7 +188,7 @@
       <div class="footer-links">
         <div class="footer-column">
           <h4>快速連結</h4>
-          <ul>
+          <ul class="footer-quick-links">
             <li><a href="index.html">首頁</a></li>
             <li><a href="portfolio.html">作品集</a></li>
             <li><a href="commission.html">委託資訊</a></li>
@@ -198,7 +198,8 @@
         
         <div class="footer-column">
           <h4>社群媒體</h4>
-          <ul>
+          <!-- 橫排社群連結（位於快速連結下方） -->
+          <ul class="footer-social-list">
             <li><a href="#" target="_blank">Instagram</a></li>
             <li><a href="#" target="_blank">Twitter</a></li>
             <li><a href="#" target="_blank">Pixiv</a></li>
