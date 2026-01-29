@@ -21,15 +21,22 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
 
 
 /* Hero Section */
+/* 首屏區塊：桌面加大左側空白，讓內容更內縮不貼邊 */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--nav-height) 24px 60px;
+  padding: var(--nav-height) 32px 60px 64px;
   position: relative;
   overflow: hidden;
+  background-image: url('../../images/50fps.gif');
+  background-size: 60vw auto;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
+
+
 
 .hero::before {
   content: '';
@@ -40,6 +47,15 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
   height: 200%;
   background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
   animation: pulse 8s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes pulse {
@@ -74,7 +90,7 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
 }
 
 .hero-subtitle {
-  font-family: 'Ma Shan Zheng', cursive;
+  font-family: var(--font-chinese);
   font-size: 1.5rem;
   color: var(--accent-purple);
   margin-bottom: 16px;
@@ -172,13 +188,20 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
 }
 
 /* Featured Grid */
+.featured-section {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 32px;
+}
+
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.featured-card {
+.featured-item, .featured-card {
   aspect-ratio: 3/4;
   border-radius: 20px;
   overflow: hidden;
@@ -186,14 +209,14 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
   cursor: pointer;
 }
 
-.featured-card img {
+.featured-item img, .featured-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.6s;
 }
 
-.featured-card::before {
+.featured-item::before, .featured-card::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -201,11 +224,11 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
   z-index: 1;
 }
 
-.featured-card:hover img {
+.featured-item:hover img, .featured-card:hover img {
   transform: scale(1.1);
 }
 
-.featured-info {
+.featured-overlay, .featured-info {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -217,20 +240,40 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
   transition: 0.4s;
 }
 
+.featured-item:hover .featured-overlay,
 .featured-card:hover .featured-info {
   transform: translateY(0);
   opacity: 1;
 }
 
-.featured-info h3 {
+.featured-overlay h3, .featured-info h3 {
   font-size: 1.3rem;
   margin-bottom: 8px;
 }
 
-.featured-info p {
+.featured-overlay p, .featured-info p {
   font-size: 0.9rem;
   margin: 0;
 }
+
+/* Services Section layout & ordering */
+.services-section {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 32px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 40px;
+  align-items: start;
+}
+
+.services-grid .service-card:nth-child(1) { grid-column: 1; grid-row: 1; justify-self: start; }
+.services-grid .service-card:nth-child(2) { grid-column: 2; grid-row: 2; justify-self: end; }
+.services-grid .service-card:nth-child(3) { grid-column: 1; grid-row: 3; justify-self: start; }
 
 /* About Section */
 .about-preview {
@@ -254,6 +297,35 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
   line-height: 2;
   margin-bottom: 20px;
 }
+
+/* Services card width suggestion */
+.service-card {
+  max-width: 520px;
+}
+
+/* CTA Section (置中排版) */
+.cta-section {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 80px 32px;
+  padding-left: 64px;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
 
 /* Responsive */
 @media (max-width: 968px) {
@@ -295,9 +367,15 @@ h1, h2, h3, h4, h5, h6, .logo, .nav-link {
 }
 
 @media (max-width: 640px) {
+  .hero { background-size: 90vw auto; }
+  .featured-section { padding: 0 20px; }
+  .services-section { padding-left: 20px; padding-right: 20px; }
+  .services-grid { grid-template-columns: 1fr; }
   .featured-grid {
     grid-template-columns: 1fr;
   }
+
+  .cta-section { padding: 60px 20px; }
 
   .hero-buttons {
     flex-direction: column;
